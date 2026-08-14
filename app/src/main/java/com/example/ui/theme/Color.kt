@@ -18,7 +18,10 @@ enum class MonetSeedColor(val displayName: String, val primaryColor: Color) {
     CORAL("Expressive Coral", Color(0xFFE0533C)),
     MINT("Emerald Mint", Color(0xFF00897B)),
     CYAN("Cosmic Cyan", Color(0xFF00838F)),
-    AMBER("Sunset Amber", Color(0xFFD84315))
+    AMBER("Sunset Amber", Color(0xFFD84315)),
+    ROSE("Vibrant Rose", Color(0xFFD81B60)),
+    INDIGO("Royal Indigo", Color(0xFF3F51B5)),
+    TEAL("Pacific Teal", Color(0xFF009688))
 }
 
 fun getExpressiveColorScheme(seed: MonetSeedColor, isDark: Boolean) = when (seed) {
@@ -239,6 +242,138 @@ fun getExpressiveColorScheme(seed: MonetSeedColor, isDark: Boolean) = when (seed
             onSurface = Color(0xFF231A17),
             surfaceVariant = Color(0xFFF5DDD7),
             onSurfaceVariant = Color(0xFF53433F)
+        )
+    }
+
+    MonetSeedColor.ROSE -> if (isDark) {
+        darkColorScheme(
+            primary = Color(0xFFFFB0C8),
+            onPrimary = Color(0xFF5E1133),
+            primaryContainer = Color(0xFF7B2949),
+            onPrimaryContainer = Color(0xFFFFD9E2),
+            secondary = Color(0xFFE5BDC5),
+            onSecondary = Color(0xFF432930),
+            secondaryContainer = Color(0xFF5C3F46),
+            onSecondaryContainer = Color(0xFFFFD9E2),
+            tertiary = Color(0xFFE2C28C),
+            onTertiary = Color(0xFF402D04),
+            tertiaryContainer = Color(0xFF594318),
+            onTertiaryContainer = Color(0xFFFFDEA7),
+            background = Color(0xFF1F1014),
+            onBackground = Color(0xFFF0DEE1),
+            surface = Color(0xFF1F1014),
+            onSurface = Color(0xFFF0DEE1),
+            surfaceVariant = Color(0xFF524346),
+            onSurfaceVariant = Color(0xFFD6C2C5)
+        )
+    } else {
+        lightColorScheme(
+            primary = Color(0xFF982560),
+            onPrimary = Color(0xFFFFFFFF),
+            primaryContainer = Color(0xFFFFD9E2),
+            onPrimaryContainer = Color(0xFF3E001D),
+            secondary = Color(0xFF75565E),
+            onSecondary = Color(0xFFFFFFFF),
+            secondaryContainer = Color(0xFFFFD9E2),
+            onSecondaryContainer = Color(0xFF2B151C),
+            tertiary = Color(0xFF735A2C),
+            onTertiary = Color(0xFFFFFFFF),
+            tertiaryContainer = Color(0xFFFFDEA7),
+            onTertiaryContainer = Color(0xFF261900),
+            background = Color(0xFFFFF8F8),
+            onBackground = Color(0xFF22191C),
+            surface = Color(0xFFFFF8F8),
+            onSurface = Color(0xFF22191C),
+            surfaceVariant = Color(0xFFF2DDE1),
+            onSurfaceVariant = Color(0xFF524346)
+        )
+    }
+
+    MonetSeedColor.INDIGO -> if (isDark) {
+        darkColorScheme(
+            primary = Color(0xFFBAC3FF),
+            onPrimary = Color(0xFF212C6E),
+            primaryContainer = Color(0xFF394386),
+            onPrimaryContainer = Color(0xFFDEE0FF),
+            secondary = Color(0xFFC3C5DD),
+            onSecondary = Color(0xFF2D2F42),
+            secondaryContainer = Color(0xFF434559),
+            onSecondaryContainer = Color(0xFFE0E1F9),
+            tertiary = Color(0xFFE4BAD7),
+            onTertiary = Color(0xFF44263D),
+            tertiaryContainer = Color(0xFF5C3C54),
+            onTertiaryContainer = Color(0xFFFFD7F3),
+            background = Color(0xFF12131C),
+            onBackground = Color(0xFFE3E1EC),
+            surface = Color(0xFF12131C),
+            onSurface = Color(0xFFE3E1EC),
+            surfaceVariant = Color(0xFF46464F),
+            onSurfaceVariant = Color(0xFFC6C5D0)
+        )
+    } else {
+        lightColorScheme(
+            primary = Color(0xFF515B9F),
+            onPrimary = Color(0xFFFFFFFF),
+            primaryContainer = Color(0xFFDEE0FF),
+            onPrimaryContainer = Color(0xFF0B1457),
+            secondary = Color(0xFF5B5D72),
+            onSecondary = Color(0xFFFFFFFF),
+            secondaryContainer = Color(0xFFE0E1F9),
+            onSecondaryContainer = Color(0xFF181A2C),
+            tertiary = Color(0xFF76536C),
+            onTertiary = Color(0xFFFFFFFF),
+            tertiaryContainer = Color(0xFFFFD7F3),
+            onTertiaryContainer = Color(0xFF2C1127),
+            background = Color(0xFFFEF7FF),
+            onBackground = Color(0xFF1B1B21),
+            surface = Color(0xFFFEF7FF),
+            onSurface = Color(0xFF1B1B21),
+            surfaceVariant = Color(0xFFE3E1EC),
+            onSurfaceVariant = Color(0xFF46464F)
+        )
+    }
+
+    MonetSeedColor.TEAL -> if (isDark) {
+        darkColorScheme(
+            primary = Color(0xFF80D5C3),
+            onPrimary = Color(0xFF00372E),
+            primaryContainer = Color(0xFF005043),
+            onPrimaryContainer = Color(0xFF9CF1DE),
+            secondary = Color(0xFFB1CCC5),
+            onSecondary = Color(0xFF1C352F),
+            secondaryContainer = Color(0xFF334B45),
+            onSecondaryContainer = Color(0xFFCDE8E1),
+            tertiary = Color(0xFFB2C8EC),
+            onTertiary = Color(0xFF1C314E),
+            tertiaryContainer = Color(0xFF334866),
+            onTertiaryContainer = Color(0xFFD3E3FF),
+            background = Color(0xFF0E1513),
+            onBackground = Color(0xFFDEE4E1),
+            surface = Color(0xFF0E1513),
+            onSurface = Color(0xFFDEE4E1),
+            surfaceVariant = Color(0xFF3F4945),
+            onSurfaceVariant = Color(0xFFBEC9C4)
+        )
+    } else {
+        lightColorScheme(
+            primary = Color(0xFF006A5A),
+            onPrimary = Color(0xFFFFFFFF),
+            primaryContainer = Color(0xFF9CF1DE),
+            onPrimaryContainer = Color(0xFF00201A),
+            secondary = Color(0xFF4A635C),
+            onSecondary = Color(0xFFFFFFFF),
+            secondaryContainer = Color(0xFFCDE8E1),
+            onSecondaryContainer = Color(0xFF06201B),
+            tertiary = Color(0xFF4B607D),
+            onTertiary = Color(0xFFFFFFFF),
+            tertiaryContainer = Color(0xFFD3E3FF),
+            onTertiaryContainer = Color(0xFF041C36),
+            background = Color(0xFFF4FAF7),
+            onBackground = Color(0xFF161D1B),
+            surface = Color(0xFFF4FAF7),
+            onSurface = Color(0xFF161D1B),
+            surfaceVariant = Color(0xFFDAE5E0),
+            onSurfaceVariant = Color(0xFF3F4945)
         )
     }
 }
