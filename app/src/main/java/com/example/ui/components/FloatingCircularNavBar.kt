@@ -120,7 +120,11 @@ private fun FloatingCircularNavItem(
             .background(containerColor, CircleShape)
             .clickable(
                 interactionSource = interactionSource,
-                indication = ripple(bounded = true, radius = 28.dp),
+                indication = ripple(
+                    bounded = true,
+                    color = if (isSelected) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.primary,
+                    radius = 28.dp
+                ),
                 onClick = onClick
             ),
         contentAlignment = Alignment.Center
